@@ -1,0 +1,50 @@
+jugador = input(
+  "-----------------------------Bienvenido----------------------------- \nPor favor ingresa tu nombre=  "
+)
+def funcionsumd(matriz):
+    suma_dig = 0
+    for x in range (len(matriz)):
+        suma_dig=suma_dig+matriz[x][x]
+    
+    return(suma_dig)
+
+def funcionm (r,c):
+    matriz = []                     
+    for ren in range (r):           
+        renglon = []                  
+        for col in range (c):
+            print("En la semana", ren+1, "y artículo", col+1,":")
+            v = int(input("Ingresa las ventas: \n"))
+            renglon.append(v)    
+        matriz.append(renglon)     
+    return(matriz)
+
+
+def main():
+    r = int(input("Ingrese las semanas de venta "))
+    c = int(input("Ingrese la cantidad de artículos: "))
+    if c > 0  and r > 0:
+        matrizr = funcionm(r,c)
+        suma_por_diag = funcionsumd(matrizr)
+        print("La matriz de ventas (renglon semanas/ columanas árticulos) es: ")
+        print(*matrizr,sep="\n")
+        print()
+        print(suma_por_diag)
+        print()
+        print("La suma de los artículos vendidos por todas las semanas es: ")
+        print("La suma diagonal fue de:",suma_por_diag)
+        print()
+        promedio = (suma_por_diag)/len(matrizr)
+        maximolocal = max(matrizr)
+        minimolocal = min(matrizr)
+        maximoglobal=max(maximolocal)
+        minimoglobal=min(minimolocal)
+        print("El promedio de ventas es: ", promedio)
+        print("La cantidad máxima vendida fue: ", maximoglobal)
+        print("La cantidad mínima vendida fue: ", minimoglobal)
+        
+    else:
+        print("Error Error Error, tienes que ingresar una cantidad de semanas y de artículos mayor a cero")
+
+    
+main()

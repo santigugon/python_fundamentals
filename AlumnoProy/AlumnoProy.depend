@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1669178655 source:c:\users\emili\onedrive\escritorio\code\c++\clases\alumnoproy\funciones.cpp
+	<iostream>
+	"Alumno.h"
+
+1669178563 c:\users\emili\onedrive\escritorio\code\c++\clases\alumnoproy\alumno.h
+	<iostream>
+
+1669178637 source:c:\users\emili\onedrive\escritorio\code\c++\clases\alumnoproy\main.cpp
+	<iostream>
+	"Alumno.h"
+
